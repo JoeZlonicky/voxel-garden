@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://plant/plant.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.0666667, 0.337255, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.0666667, 0.337255, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.639216, 0, 0.898039, 1 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.639216, 0, 0.898039, 1 )
+
+[node name="Plant" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Stem" type="CSGBox" parent="."]
+material_override = SubResource( 1 )
+width = 0.1
+height = 1.0
+depth = 0.1
+
+[node name="Branch" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0900577, 0.15, 0 )
+material_override = SubResource( 2 )
+width = 0.1
+height = 0.1
+depth = 0.1
+
+[node name="Branch2" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190058, 0.25, 0 )
+material_override = SubResource( 2 )
+width = 0.1
+height = 0.1
+depth = 0.1
+
+[node name="FlowerBase" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00994228, 0.55, 0 )
+material_override = SubResource( 3 )
+width = 0.3
+height = 0.1
+depth = 0.3
+
+[node name="FlowerSide" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00994228, 0.75, -0.2 )
+material_override = SubResource( 4 )
+width = 0.3
+height = 0.3
+depth = 0.1
+
+[node name="FlowerSide2" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00994228, 0.75, 0.2 )
+material_override = SubResource( 4 )
+width = 0.3
+height = 0.3
+depth = 0.1
+
+[node name="FlowerSide3" type="CSGBox" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.190058, 0.75, -1.11759e-08 )
+material_override = SubResource( 4 )
+width = 0.3
+height = 0.3
+depth = 0.1
+
+[node name="FlowerSide4" type="CSGBox" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.209942, 0.75, -1.11759e-08 )
+material_override = SubResource( 4 )
+width = 0.3
+height = 0.3
+depth = 0.1
