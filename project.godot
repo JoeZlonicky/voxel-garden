@@ -12,7 +12,7 @@ config_version=4
 
 config/name="Voxel Garden"
 run/main_scene="res://shelf_view/shelf_view.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/art/icon.png"
 
 [display]
 

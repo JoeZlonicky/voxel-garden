@@ -1,11 +1,8 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://environment.tscn" type="PackedScene" id=1]
-[ext_resource path="res://pot/pot.tscn" type="PackedScene" id=2]
-[ext_resource path="res://plant/plants/black_rose.tscn" type="PackedScene" id=3]
-[ext_resource path="res://plant/plants/red_rose.tscn" type="PackedScene" id=4]
-[ext_resource path="res://plant/plants/violet_rose.tscn" type="PackedScene" id=5]
-[ext_resource path="res://overlay.tscn" type="PackedScene" id=6]
+[ext_resource path="res://plant/plants/rose/rose.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/overlay.tscn" type="PackedScene" id=6]
 [ext_resource path="res://shelf_view/shelf_view.gd" type="Script" id=7]
 
 [sub_resource type="StyleBoxEmpty" id=1]
@@ -28,23 +25,8 @@ width = 5.0
 height = 0.1
 depth = 1.0
 
-[node name="Pot" parent="Shelf" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0 )
-
-[node name="BlackRose" parent="Shelf/Pot" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0 )
-
-[node name="Pot2" parent="Shelf" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0.1, 0 )
-
-[node name="RedRose" parent="Shelf/Pot2" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0 )
-
-[node name="Pot3" parent="Shelf" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0.1, 0 )
-
-[node name="VioletRose" parent="Shelf/Pot3" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0 )
+[node name="Rose" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0601729, 0 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3.05, 2.95 )
