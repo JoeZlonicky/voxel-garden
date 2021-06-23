@@ -13,7 +13,8 @@ script = ExtResource( 4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.45, 0 )
 
 [node name="Rose" parent="Pot" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.292039, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
+color = Color( 0.898039, 0, 0.211765, 1 )
 
 [node name="CameraArm" type="Spatial" parent="."]
 
